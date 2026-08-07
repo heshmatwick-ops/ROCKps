@@ -1,24 +1,23 @@
 function getComputerChoice() {
+
+    let compchoice;
+
     randomnumber = Math.random();
-    return randomnumber;
-}
 
-let randnum = getComputerChoice();
-
-let compchoice;
-
-if (randnum < 0.33) {
+    if (randomnumber < 0.33) {
     compchoice = "paper" 
-}
+    }
 
-else if (randnum < 0.66) {
+    else if (randomnumber < 0.66) {
     compchoice = "scissors"   
-}
+    }
 
-else {
+    else {
     compchoice = "ROCK"
+    }
+
+    return compchoice;
 }
 
 
-console.log(randnum);
-console.log(compchoice);
+console.log(getComputerChoice());
