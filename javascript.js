@@ -74,7 +74,75 @@ function gameround(player = getHumanChoice(), comp = getComputerChoice()) {
     return winner;
 }
 
-console.log(gameround());
+function playgame() {
+
+    let compscore = 0;
+    let playerscore = 0;
+
+    let roundresult = gameround();
+
+    if (roundresult == "player") {
+        playerscore = playerscore + 1;
+    }
+
+    else if (roundresult == "comp") {
+        compscore = compscore + 1;
+    }
+
+    roundresult = gameround();
+
+    if (roundresult == "player") {
+        playerscore = playerscore + 1;
+    }
+
+    else if (roundresult == "comp") {
+        compscore = compscore + 1;
+    }
+
+    roundresult = gameround();
+
+    if (roundresult == "player") {
+        playerscore = playerscore + 1;
+    }
+
+    else if (roundresult == "comp") {
+        compscore = compscore + 1;
+    }
+
+    roundresult = gameround();
+
+    if (roundresult == "player") {
+        playerscore = playerscore + 1;
+    }
+
+    else if (roundresult == "comp") {
+        compscore = compscore + 1;
+    }
+
+    roundresult = gameround();
+
+    if (roundresult == "player") {
+        playerscore = playerscore + 1;
+    }
+
+    else if (roundresult == "comp") {
+        compscore = compscore + 1;
+    }
+    
+    if (compscore > playerscore) {
+        console.log(" you lost! computer win the game! you had " + playerscore + " and computer had " + compscore + " score!");
+    }
+
+    else if (compscore < playerscore) {
+        console.log(" you win! you had " + playerscore + " and computer had " + compscore + " score!");
+    }
+
+    else if (compscore == playerscore) {
+        console.log(" you tied! you had " + playerscore + " and computer had " + compscore + " score!");
+    }
+}
+
+playgame();
 
 //console.log(getHumanChoice());
 
