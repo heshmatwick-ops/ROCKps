@@ -61,8 +61,8 @@ function gameround(player = getHumanChoice(), comp = getComputerChoice()) {
 
     else if (player == "paper" && comp == "rock" ) {
 
-        console.log("comp wins!");
-        winner = "comp"
+        console.log("player wins!");
+        winner = "player"
     }
 
     else if (player == "paper" && comp == "scissors" ) {
